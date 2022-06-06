@@ -1,0 +1,5 @@
+进鸡的吃货
+
+胖叔视频里用的阿里云链接貌似不可用了，会导致项目build不起来，可以使用原生的google()和jcenter()，或者使用新的阿里云镜像地址：maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+       maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+       maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
