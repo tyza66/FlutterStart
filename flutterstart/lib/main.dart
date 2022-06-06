@@ -15,14 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Welcom to Flutter",
       home: Scaffold(
-        /*
         appBar: AppBar(
           title: const Text(
-            'Welcom to Flutter',
+            'This is a Flutter Start Demo By:tyza66',
             textAlign: TextAlign.center,
           ),
         ),
-        */
         body: Center(
             child: Container(child: MyGridListView2()
                 /*ListView.builder(
@@ -161,5 +159,12 @@ class MyGridListView2 extends StatelessWidget {
         )
       ],
     );
+  }
+}
+
+class MyRow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row();
   }
 }
