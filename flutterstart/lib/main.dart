@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Center(
-            child: Container(child: MyGridListView2()
+            child: Container(child: MyRow()
                 /*ListView.builder(
             itemCount: items.length,
             itemBuilder: (context, index) {
@@ -165,6 +165,27 @@ class MyGridListView2 extends StatelessWidget {
 class MyRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row();
+    return Row(
+      children: [
+        Expanded(
+            child: RaisedButton(
+          onPressed: () {},
+          color: Colors.lightBlue,
+          child: Text('按钮1'),
+        )),
+        Expanded(
+            child: RaisedButton(
+          onPressed: () {},
+          color: Colors.lightBlueAccent,
+          child: Text('按钮2'),
+        )),
+        Expanded(
+            child: RaisedButton(
+          onPressed: () {},
+          color: Colors.lightGreen,
+          child: Text('按钮3'),
+        ))
+      ],
+    );
   }
 }
