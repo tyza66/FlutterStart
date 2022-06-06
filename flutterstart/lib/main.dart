@@ -15,8 +15,9 @@ class FirstPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('获取电话')),
       body: Center(
-        child: RouteButton(),
-      ),
+          child: Column(
+        children: [RouteButton(), Image.asset('images/1.jpg')],
+      )),
     );
   }
 }
