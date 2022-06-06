@@ -24,16 +24,16 @@ class MyApp extends StatelessWidget {
         ),
         */
         body: Center(
-            child: Container(
-          child: ListView.builder(
+            child: Container(child: MyGridListView2()
+                /*ListView.builder(
             itemCount: items.length,
             itemBuilder: (context, index) {
               return ListTile(
                 title: Text('${items[index]}'),
               );
             },
-          ),
-          /*
+          ),*/
+                /*
           alignment: Alignment.topLeft,
           width: 500,
           height: 400,
@@ -47,12 +47,12 @@ class MyApp extends StatelessWidget {
             border: Border.all(width: 2.0, color: Colors.red),
           ),
           */
-          /*
+                /*
           width: 300,
           height: 200,
           color: Colors.lightBlue,
           */
-          /*
+                /*
           alignment: Alignment.topLeft,
           width: 500,
           height: 400,
@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
             border: Border.all(width: 2.0, color: Colors.red),
           ),
           */
-          /*
+                /*
           child: Image.network(
             'https://i0.hdslb.com/bfs/face/9517a7cb97a237d3548de571ba61e1cc62731c0c.jpg@240w_240h_1c_1s.webp',
             fit: BoxFit.contain,
@@ -74,8 +74,8 @@ class MyApp extends StatelessWidget {
             colorBlendMode: BlendMode.darken,
             repeat: ImageRepeat.noRepeat
           ),*/
-          //child: MyList(),
-        )
+                //child: MyList(),
+                )
             /*Text(
             "Hello111 World111111111111111111111111111111111111111111111111111111111111",
             textAlign: TextAlign.left,
@@ -111,6 +111,53 @@ class MyList extends StatelessWidget {
         new Container(
           width: 180.0,
           color: Colors.lightGreen,
+        )
+      ],
+    );
+  }
+}
+
+class MyGridListView1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GridView.count(
+        padding: const EdgeInsets.all(20.0),
+        crossAxisSpacing: 10.0,
+        crossAxisCount: 3,
+        children: const <Widget>[
+          Text("data"),
+          Text("data"),
+          Text("data"),
+          Text("data")
+        ]);
+  }
+}
+
+class MyGridListView2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GridView(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          mainAxisSpacing: 2.0, //行间距
+          crossAxisSpacing: 2.0, //列间距
+          childAspectRatio: 1.0),
+      children: [
+        new Image.network(
+          'https://i0.hdslb.com/bfs/face/9517a7cb97a237d3548de571ba61e1cc62731c0c.jpg@240w_240h_1c_1s.webp',
+          fit: BoxFit.cover,
+        ),
+        new Image.network(
+          'https://i0.hdslb.com/bfs/face/9517a7cb97a237d3548de571ba61e1cc62731c0c.jpg@240w_240h_1c_1s.webp',
+          fit: BoxFit.cover,
+        ),
+        new Image.network(
+          'https://i0.hdslb.com/bfs/face/9517a7cb97a237d3548de571ba61e1cc62731c0c.jpg@240w_240h_1c_1s.webp',
+          fit: BoxFit.cover,
+        ),
+        new Image.network(
+          'https://i0.hdslb.com/bfs/face/9517a7cb97a237d3548de571ba61e1cc62731c0c.jpg@240w_240h_1c_1s.webp',
+          fit: BoxFit.cover,
         )
       ],
     );
