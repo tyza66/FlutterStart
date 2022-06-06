@@ -14,8 +14,23 @@ class MyApp extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        body: const Center(
-          child: Text(
+        body: Center(
+            child: Container(
+          alignment: Alignment.topLeft,
+          width: 500,
+          height: 400,
+          //color: Colors.lightBlue,
+          padding: const EdgeInsets.fromLTRB(10.0, 30.0, 0, 0),
+          margin: const EdgeInsets.all(10.0),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+                // ignore: prefer_const_literals_to_create_immutables
+                colors: [Colors.lightBlue, Colors.greenAccent, Colors.purple]),
+            border: Border.all(width: 2.0, color: Colors.red),
+          ),
+          child: const Text("tyza66", style: TextStyle(fontSize: 40)),
+        )
+            /*Text(
             "Hello111 World111111111111111111111111111111111111111111111111111111111111",
             textAlign: TextAlign.left,
             maxLines: 1,
@@ -26,8 +41,8 @@ class MyApp extends StatelessWidget {
               decoration: TextDecoration.underline,
               decorationStyle: TextDecorationStyle.solid
             ),
-          ),
-        ),
+          ),*/
+            ),
       ),
     );
   }
