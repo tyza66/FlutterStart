@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Center(
-            child: Container(child: MyRow()
+            child: Container(child: MyColumn()
                 /*ListView.builder(
             itemCount: items.length,
             itemBuilder: (context, index) {
@@ -186,6 +186,17 @@ class MyRow extends StatelessWidget {
           child: Text('按钮3'),
         ))
       ],
+    );
+  }
+}
+
+class MyColumn extends StatelessWidget {
+  @override
+  Widget build(Object context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [Text('A'), Expanded(child: Text('B')), Text('C'), Text('D')],
     );
   }
 }
